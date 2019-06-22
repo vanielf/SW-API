@@ -8,6 +8,9 @@ const app = Express();
 app.use(Logger.express);
 
 
+app.use('/v1', require('./api'));
+
+
 app.use((req, res, next) => {
 	res.sendStatus(404);
 });
